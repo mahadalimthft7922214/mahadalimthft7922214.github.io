@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content with Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            display: flex; /* This enables flexbox layout */
+            flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */
+            gap: 20px; /* Space between the two columns */
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container */
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-left {
+            flex: 2; /* Takes 2 parts of the available space */
+            min-width: 300px; /* Minimum width before wrapping */
+        }
+
+        .image-right {
+            flex: 1; /* Takes 1 part of the available space */
+            min-width: 250px; /* Minimum width before wrapping */
+            display: flex; /* Use flex to center image if it doesn't fill */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        .image-right img {
+            max-width: 100%; /* Ensure image fits within its container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Slightly rounded corners for the image */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #D32F2F; /* Blood Connect red */
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack items vertically on small screens */
+            }
+            .content-left, .image-right {
+                flex: none; /* Remove flex growing on small screens */
+                width: 100%; /* Take full width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-left">
+            <h1>Our Mission: Connecting Lifesavers</h1>
+            <p>Welcome to Blood Connect, your reliable platform for bridging the gap between those who need blood and those willing to donate. Our mission is simple yet profound: to save lives by making blood donation accessible, efficient, and community-driven.</p>
+            <p>Every day, countless individuals require blood transfusions due to emergencies, surgeries, chronic illnesses, and various medical conditions. The timely availability of blood can be the difference between life and death. That's where Blood Connect steps in.</p>
+            <p>Through our user-friendly mobile application, we empower donors to find nearby donation centers or requests, and enable patients to quickly locate available blood types. We believe in the power of community and technology to foster a network of compassion.</p>
+            <p>Join us in our endeavor to build a healthier, more responsive community. Your single donation can save up to three lives. Together, we can make a significant impact.</p>
+            <p>Thank you for being a part of the Blood Connect family!</p>
+        </div>
+        <div class="image-right">
+            <img src="https://via.placeholder.com/400x300/D32F2F/FFFFFF?text=Blood+Donor" alt="Blood Connect Donor">
+        </div>
+    </div>
+</body>
+</html>
